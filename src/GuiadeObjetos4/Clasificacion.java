@@ -16,5 +16,9 @@ public final class Clasificacion {
     public final static String NC17 = "Contenido sólo para mayores de 18 años";
     public final static String UNRATED = "Películas que no han pasado el proceso de calificación";
 
+    public Clasificacion(){
+
+    }
+
 
 }

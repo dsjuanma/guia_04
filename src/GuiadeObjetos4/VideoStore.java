@@ -1,4 +1,5 @@
 package GuiadeObjetos4;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -68,6 +69,52 @@ public class VideoStore {
             }
         }
         return cliente;
+    }
+
+    public Alquiler alquilaPelicula(String nombre, String titulo){
+        Cliente cliente = buscaCliente(nombre);
+        if(cliente==null){
+            System.out.println("\nEl cliente no existe, agregar cliente");
+        }
+        Pelicula pelicula = buscaPelicula(titulo);
+        if(pelicula == null){
+            System.out.println("\nLa pelicua no se encuentra disponible para su alquiler..");
+        }
+        if(cliente != null && pelicula != null && pelicula.getStock() >0 ){
+            pelicula.setStock(pelicula.getStock()-1);
+            Pelicula pelis = new Pelicula();
+            pelis.setPopularidad(pelis.getPopularidad()+1);
+            Alquiler alquiler = new Alquiler(cliente,pelicula);
+            cliente.listAlquileres.add(alquiler);
+            for(Alquiler i : alquileres){
+                if(i == null){
+                    i = alquiler;
+                }
+            }
+            return alquiler;
+        }
+        else {
+            System.out.println("No hay unidades disponibles para el alquiler");
+        }
+
+        return null;
+
+    }
+
+    public void mostrarAlquieresCliente(String nombreCliente) {
+        System.out.println("Alquieleres de " + nombreCliente);
+        Cliente cliente = buscaCliente(nombreCliente);
+       /* for (Alquiler i : alquileres) {
+            System.out.println(i);
+        }
+
+        */
+        int n = alquileres.size();
+        System.out.println(n);
+
+        for(int i= 0 ; i<n; i++){
+            System.out.println(alquileres);
+        }
     }
 
 

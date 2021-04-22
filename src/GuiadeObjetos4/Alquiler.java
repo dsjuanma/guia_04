@@ -18,10 +18,10 @@ public class Alquiler {
     public Alquiler() {
     }
 
-    public Alquiler(Cliente clientes, Pelicula peliculas, LocalDateTime fechaRetiro) {
+    public Alquiler(Cliente clientes, Pelicula peliculas) {
         this.clientes = clientes;
         this.peliculas = peliculas;
-        this.fechaRetiro = fechaRetiro;
+        this.fechaRetiro =LocalDateTime.now();
         this.fechaDevolucion = fechaRetiro.plusDays(2);
     }
 

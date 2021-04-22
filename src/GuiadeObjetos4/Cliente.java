@@ -1,15 +1,20 @@
 package GuiadeObjetos4;
 
+
 /*
 nuestro cliente nos cuenta que le interesa saber acerca de quienes alquilan
 sus películas, su nombre, teléfono y dirección.
  */
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cliente {
 
     private String nombre;
     private String telefono;
     private String direccion;
+    List <Alquiler> listAlquileres = new ArrayList<>();
 
     public Cliente(String nombre,String telefono, String direccion){
         this.nombre = nombre;

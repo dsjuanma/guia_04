@@ -15,20 +15,22 @@ public class Pelicula {
     private String duracion;
     private String clasificacion;
     private String origen;
-    private String descripccion;
+    private String descripcion;
+    private int popularidad = 0;
     private int stock = 1;
 
-    public Pelicula(String titulo, String fechaLanzamiento, String duracion, String clasificacion, String origen, String descripccion, int stock) {
+    public Pelicula(){
+
+    }
+
+    public Pelicula(String titulo, String fechaLanzamiento, String duracion, String clasificacion, String origen, String descripcion, int stock) {
         this.titulo = titulo;
         this.fechaLanzamiento = fechaLanzamiento;
         this.duracion = duracion;
         this.clasificacion = clasificacion;
         this.origen = origen;
-        this.descripccion = descripccion;
+        this.descripcion = descripcion;
         this.stock = stock;
-    }
-
-    public Pelicula(String titulo, String fechaLanzamiento, String duracion, String usa, String origen, int i) {
     }
 
 
@@ -72,12 +74,28 @@ public class Pelicula {
         this.origen = origen;
     }
 
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
     public String getDescripccion() {
-        return descripccion;
+        return descripcion;
     }
 
     public void setDescripccion(String descripccion) {
-        this.descripccion = descripccion;
+        this.descripcion = descripccion;
+    }
+
+    public int getPopularidad() {
+        return popularidad;
+    }
+
+    public void setPopularidad(int popularidad) {
+        this.popularidad = popularidad;
     }
 
     @Override
@@ -88,8 +106,9 @@ public class Pelicula {
                 "\nDuracion:........... " + this.duracion +
                 "\nClasificacion:......... " + this.clasificacion+
                 "\nOrigen:......... " + this.origen+
-                "\nDescripccion:......... " + this.descripccion+
-                "\nStock:......... " + this.stock;
+                "\nDescripcion:......... " + this.descripcion+
+                "\nStock:......... " + this.stock +
+                "\npopularidad:......... " + this.popularidad;
 
 
     }

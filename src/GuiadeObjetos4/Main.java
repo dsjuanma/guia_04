@@ -23,27 +23,44 @@ public class Main {
         clientes.add(cliente2);
         clientes.add(cliente3);
         clientes.add(cliente4);
-        for(Cliente i : clientes){
+        /*for(Cliente i : clientes){
             if(i != null)
                 System.out.println(i);
         }
 
+         */
+
         Pelicula pelicula1 = new Pelicula("Terminator 1", "Enero 2021", "180 minutos",Clasificacion.G, "USA","Un tipo que secuestra un pibe y mata un policia",1);
-        Pelicula pelicula2 = new Pelicula("Terminator 2", "febrero 2021", "180 minutos",Clasificacion.NC17, "USA","Un tipo que secuestra un pibe y mata un policia",1);
-        Pelicula pelicula3 = new Pelicula("Terminator 3", "marzo 2021", "180 minutos",Clasificacion.PG13, "USA","Un tipo que secuestra un pibe y mata un policia",1);
-        Pelicula pelicula4 = new Pelicula("Terminator 4", "abril 2021", "180 minutos", Clasificacion.UNRATED,"USA","Un tipo que secuestra un pibe y mata un policia",1);
+        Pelicula pelicula2 = new Pelicula("Alien", "febrero 2021", "120 minutos",Clasificacion.NC17, "USA","Un Bicho que tiene terrible lengua",1);
+        Pelicula pelicula3 = new Pelicula("Harry Potter", "marzo 2021", "150 minutos",Clasificacion.PG13, "USA","Un pibe que juega con un palito de madera",1);
+        Pelicula pelicula4 = new Pelicula("Ace Ventura", "abril 2021", "160 minutos", Clasificacion.UNRATED,"USA","Un Fanatico de la naturaleza",1);
         List <Pelicula> peliculas = new ArrayList<>();
         peliculas.add(pelicula1);
         peliculas.add(pelicula2);
         peliculas.add(pelicula3);
         peliculas.add(pelicula4);
-        for(Pelicula i : peliculas){
+      /*  for(Pelicula i : peliculas){
             if(i != null)
                 System.out.println(i);
         }
 
-        Alquiler alquiler = new Alquiler(cliente1,pelicula1, LocalDateTime.now());
-        System.out.println(alquiler);
+       */
+
+        Alquiler alquiler = new Alquiler(cliente1,pelicula1);
+
+        Alquiler alquiler2 = new Alquiler(cliente1,pelicula3);
+
+        Alquiler alquiler3 = new Alquiler(cliente1,pelicula2);
+
+        List <Alquiler> alquileres = new ArrayList<>();
+        alquileres.add(alquiler);
+        alquileres.add(alquiler2);
+        alquileres.add(alquiler3);
+
+        VideoStore roberto = new VideoStore(clientes,peliculas,alquileres);
+
+        roberto.mostrarAlquieresCliente("Roberto");
+
 
 
 

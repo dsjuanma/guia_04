@@ -14,6 +14,10 @@ public final class Genero {
     public final static String HORROR="horror";
     public final static String DOCUMENTAL= "documental";
 
+    public Genero(){
+
+    }
+
 
 
 }
