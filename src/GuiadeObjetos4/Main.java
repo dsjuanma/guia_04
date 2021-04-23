@@ -76,10 +76,12 @@ public class Main {
 
         roberto.devolucionPeli("Nicolas","Titanic");
         roberto.alquilaPelicula("Nicolas","Ace Ventura");
-        roberto.alquilaPelicula("Nicolas","Titanic");
-        roberto.devolucionPeli("Nicolas","Titanic");
-        roberto.alquilaPelicula("Nicolas","Titanic");
-        roberto.muestraAlquilerCliente("Nicolas");
+        roberto.alquilaPelicula("Felipe","Titanic");
+        roberto.alquilaPelicula("Felipe","Terminator 1");
+        //roberto.muestraAlquilerCliente("Nicolas");
+
+        System.out.println("\n\n\n\n\n Alquileres completos");
+        roberto.mostrarAlquileres();
 
 
         //roberto.muestraAlquilerCliente("Roberto");

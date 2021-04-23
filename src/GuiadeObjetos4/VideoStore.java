@@ -101,11 +101,14 @@ public class VideoStore {
             pelicula.setPopularidad(pelicula.getPopularidad() + 1);
             Alquiler alquiler = new Alquiler(cliente, pelicula);
             cliente.listAlquileres.add(alquiler);
-            for (Alquiler i : alquileres) {
+            alquileres.add(alquiler);
+          /*  for (Alquiler i : alquileres) {
                 if (i == null) {
                     i = alquiler;
                 }
             }
+
+           */
             return alquiler;
         }
         return null;
@@ -119,6 +122,7 @@ public class VideoStore {
         if (cliente != null && pelicula != null && pelicula.getStock() == 0) {
             pelicula.setStock(pelicula.getStock() + 1);
             System.out.println("Pelicula Devuelta");
+            System.out.println(pelicula);
 
         }
         else
@@ -128,8 +132,14 @@ public class VideoStore {
     }
     public void mostrarAlquileres() {
         System.out.println("\nAlquileres vigentes:\n");
-        for (Alquiler alquiler : alquileres) {
-            System.out.println(alquiler);
+        for (Alquiler i : getAlquileres()) {
+            if(i!=null){
+            System.out.println(i);
+        }
+            else
+            {
+            System.out.println("No hay peliculas");
+            }
         }
     }
 
