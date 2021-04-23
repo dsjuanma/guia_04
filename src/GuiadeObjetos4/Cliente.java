@@ -51,7 +51,7 @@ public class Cliente {
         return  "\nCliente: "       +
                 "\nNombre:..... " + this.nombre +
                 "\nTelefono:........... " + this.telefono +
-                "\nCarrera:......... " + this.direccion;
+                "\nDireccion:......... " + this.direccion;
 
     }
 }

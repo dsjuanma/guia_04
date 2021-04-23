@@ -74,8 +74,9 @@ public class Main {
 
 
 
-      //  roberto.devolucionPeli("Nicolas","Titanic");
+        roberto.devolucionPeli("Nicolas","Titanic");
         roberto.alquilaPelicula("Nicolas","Ace Ventura");
+        roberto.alquilaPelicula("Nicolas","Titanic");
         roberto.muestraAlquilerCliente("Nicolas");
 
 

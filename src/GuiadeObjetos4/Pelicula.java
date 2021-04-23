@@ -12,7 +12,7 @@ origen y una descripción de la misma
 public class Pelicula {
 
 
-    private static int i = 1;
+
     private String titulo;
     private String fechaLanzamiento;
     private String duracion;
@@ -21,6 +21,7 @@ public class Pelicula {
     private String descripcion;
     private static int popularidad;
     private int stock = 1;
+
 
     public Pelicula(){
 
@@ -33,7 +34,7 @@ public class Pelicula {
         this.clasificacion = clasificacion;
         this.origen = origen;
         this.descripcion = descripcion;
-        this.popularidad = popularidad ;
+        this.popularidad = popularidad;
         this.stock = stock;
     }
 
