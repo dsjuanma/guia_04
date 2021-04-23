@@ -98,7 +98,7 @@ public class VideoStore {
         if (cliente != null && pelicula != null && pelicula.getStock() > 0) {
             pelicula.setStock(pelicula.getStock() - 1);
             Pelicula pelis = new Pelicula();
-            pelis.setPopularidad(pelis.getPopularidad() + 1);
+            pelicula.setPopularidad(pelicula.getPopularidad() + 1);
             Alquiler alquiler = new Alquiler(cliente, pelicula);
             cliente.listAlquileres.add(alquiler);
             for (Alquiler i : alquileres) {
@@ -110,6 +110,8 @@ public class VideoStore {
         }
         return null;
     }
+
+
 
     public void devolucionPeli(String nombre, String titulo){
         Cliente cliente = buscaCliente(nombre);

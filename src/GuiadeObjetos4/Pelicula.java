@@ -19,7 +19,7 @@ public class Pelicula {
     private String clasificacion;
     private String origen;
     private String descripcion;
-    private static int popularidad;
+    private  int popularidad;
     private int stock = 1;
 
 
