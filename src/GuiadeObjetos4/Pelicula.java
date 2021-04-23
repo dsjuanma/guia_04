@@ -8,6 +8,7 @@ origen y una descripción de la misma
  */
 
 
+
 public class Pelicula {
 
     private String titulo;
@@ -16,7 +17,7 @@ public class Pelicula {
     private String clasificacion;
     private String origen;
     private String descripcion;
-    private int popularidad = 0;
+    private static int popularidad = 0;
     private int stock = 1;
 
     public Pelicula(){

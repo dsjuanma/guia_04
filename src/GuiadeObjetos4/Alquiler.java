@@ -7,9 +7,10 @@ import java.time.format.DateTimeFormatter;
 
 public class Alquiler {
 
+    private static int i = 1;
     private Cliente clientes;
     private Pelicula peliculas;
-    public static UUID uuid = UUID.randomUUID();
+    private int id;
     private LocalDateTime fechaRetiro = LocalDateTime.now();
     private LocalDateTime fechaDevolucion = LocalDateTime.now();
     private DateTimeFormatter fechaRetiroModif = DateTimeFormatter.ofPattern("hh: mm: ss  dd-MMM-yyyy");
@@ -19,6 +20,7 @@ public class Alquiler {
     }
 
     public Alquiler(Cliente clientes, Pelicula peliculas) {
+        this.id = i++;
         this.clientes = clientes;
         this.peliculas = peliculas;
         this.fechaRetiro =LocalDateTime.now();
@@ -42,12 +44,12 @@ public class Alquiler {
         this.peliculas = peliculas;
     }
 
-    public static UUID getUuid() {
-        return uuid;
+    public int getId() {
+        return id;
     }
 
-    public static void setUuid(UUID uuid) {
-        Alquiler.uuid = uuid;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public LocalDateTime getFechaRetiro() {
@@ -71,7 +73,7 @@ public class Alquiler {
         return  "\nAlquiler: "       +
                 "\n" + this.clientes +
                 "\n" + this.peliculas +
-                "\nID:......... " + uuid+
+                "\nID:......... " + id+
                 "\nFecha de Retiro:......... " +this.fechaRetiro.format(fechaRetiroModif)+
                 "\nFecha de Devolucion:......... " + this.fechaDevolucion.format(fechaRetiroModif);
 
