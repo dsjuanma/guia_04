@@ -7,6 +7,9 @@ import java.time.format.DateTimeFormatter;
 
 public class Alquiler {
 
+
+
+
     private static int i = 1;
     private Cliente clientes;
     private Pelicula peliculas;
@@ -25,6 +28,7 @@ public class Alquiler {
         this.peliculas = peliculas;
         this.fechaRetiro =LocalDateTime.now();
         this.fechaDevolucion = fechaRetiro.plusDays(2);
+
     }
 
 

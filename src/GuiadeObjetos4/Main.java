@@ -69,12 +69,17 @@ public class Main {
 
         VideoStore roberto = new VideoStore(clientes, peliculas, alquileres);
         roberto.alquilaPelicula("Nicolas","Titanic");
-        roberto.alquilaPelicula("Nicolas","Terminator 1");
-        roberto.alquilaPelicula("Nicolas","Ace Ventura");
-        roberto.alquilaPelicula("Roberto","Alien");
+        //roberto.alquilaPelicula("Nicolas","Ace Ventura");
 
+
+
+
+      //  roberto.devolucionPeli("Nicolas","Titanic");
+        roberto.alquilaPelicula("Nicolas","Ace Ventura");
         roberto.muestraAlquilerCliente("Nicolas");
-        roberto.muestraAlquilerCliente("Roberto");
+
+
+        //roberto.muestraAlquilerCliente("Roberto");
 
 
        /* if (roberto.buscaCliente("Nicolas") == null) {
