@@ -10,6 +10,7 @@ public class VideoStore {
     private List<Cliente> clientes = new ArrayList<>();
     private List<Pelicula> peliculas = new ArrayList<>();
     private List<Alquiler> alquileres = new ArrayList<>();
+    private static int k = 1;
 
 
     public VideoStore(List<Cliente> clientes, List<Pelicula> peliculas, List<Alquiler> alquileres) {
@@ -41,6 +42,12 @@ public class VideoStore {
     public void setAlquileres(List<Alquiler> alquileres) {
         this.alquileres = alquileres;
     }
+
+    /***
+     *
+     * @param Busca una pelicula en particular por el titulo
+     * @return
+     */
 
     public Pelicula buscaPelicula(String titulo) {
         for (Pelicula i : peliculas) {
@@ -91,7 +98,9 @@ public class VideoStore {
         if (cliente != null && pelicula != null && pelicula.getStock() > 0) {
             pelicula.setStock(pelicula.getStock() - 1);
             Pelicula pelis = new Pelicula();
-            pelis.setPopularidad(pelis.getPopularidad() + 1);
+            k=pelis.getPopularidad();
+            pelis.setPopularidad(k+1);
+           // pelis.setPopularidad(pelis.getPopularidad() + 1);
             Alquiler alquiler = new Alquiler(cliente, pelicula);
             cliente.listAlquileres.add(alquiler);
             for (Alquiler i : alquileres) {
@@ -125,9 +134,7 @@ public class VideoStore {
     }
 
     public List<Pelicula> ordenaPeliculas() {
-
         List<Pelicula> pelisOrdenadas = peliculas;
-
         return pelisOrdenadas.stream()
                 .sorted((Pelicula p1, Pelicula p2) -> p2.getPopularidad() - p1.getPopularidad())
                 .collect(Collectors.toList());

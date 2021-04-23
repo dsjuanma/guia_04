@@ -11,6 +11,7 @@ origen y una descripción de la misma
 
 public class Pelicula {
 
+
     private static int i = 1;
     private String titulo;
     private String fechaLanzamiento;
